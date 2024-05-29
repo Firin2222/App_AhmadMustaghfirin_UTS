@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Program</title>
+</head>
+<body>
+    <h1>If Else Program</h1>
+    <label for="number">Silahkan Masukkan Nilai:</label>
+    <input type="number" id="numberInput">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            // Mendapatkan nilai dari input
+            var number = parseInt(document.getElementById('numberInput').value);
+            var resultMessage;
+
+            // Melakukan pengecekan menggunakan if-else
+            if (number < 0 || number > 100) {
+                resultMessage = 'Error!!:Silahkan Masukkan Nilai Antara 0 sampai 100.';
+            } else {
+                if (number >= 90 && number <= 100) {
+                    resultMessage = "Selamat Anda Mendapatkan Nilai A.";
+                } else if (number >= 80 && number <= 89) {
+                    resultMessage = "Selamat Anda Mendapatkan Nilai B.";
+                } else if (number >= 70 && number <= 79) {
+                    resultMessage = "Selamat Anda Mendapatkan Nilai C.";
+                } else if (number >= 60 && number <= 69) {
+                    resultMessage = "Selamat Anda Mendapatkan Nilai D.";
+                } else {
+                    resultMessage = "Selamat Anda Mendapatkan Nilai E.";
+                }
+            }
+
+            // Menampilkan hasil
+            document.getElementById('result').innerHTML = resultMessage;
+        }
+    </script>
+</body>
+</html>

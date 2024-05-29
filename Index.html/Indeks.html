@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="coding/styles.css">
+<body>
+    <div class="container">
+        <h2>Input Nilai Mahasiswa</h2>
+        <form id="nilaiForm">
+            <div class="form-group">
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" name="nim" required>
+            </div>
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="mataKuliah">Mata Kuliah:</label>
+                <select id="mataKuliah" name="mataKuliah" required>
+                    <option value="">Pilih Mata Kuliah</option>
+                    <option value="Mata Kuliah 1">Pendidikan Pancasila</option>
+                    <option value="Mata Kuliah 2">Kalkulus</option>
+                    <option value="Mata Kuliah 3">Diskrit</option>
+                    <option value="Mata Kuliah 4">Desain Perangkat Lunak</option>
+                    <option value="Mata Kuliah 5">Bahasa Indonesia</option>
+                    <option value="Mata Kuliah 6">Pemrogram Komputer</option>
+                    <option value="Mata Kuliah 7">Arsitektur Komputer</option>
+                    <option value="Mata Kuliah 8">Sistem Oprasi</option>
+                    <option value="Mata Kuliah 9">Struktur Data Dan Algoritma</option>
+                    <option value="Mata Kuliah 10">Praktik Pemrograman Komputer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nilai">Nilai Akhir:</label>
+                <input type="number" id="nilai" name="nilai" min="0" max="100" required>
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="tampilkanNilai()">TAMPIL</button>
+                <button type="button" onclick="resetForm()">RESET</button>
+            </div>
+        </form>
+        <div id="hasilTampil" class="hasil-tampil">
+           
+        </div>
+    </div>
+
+    <script src="coding/Coding.js"></script> 
+</body>
+</html>
